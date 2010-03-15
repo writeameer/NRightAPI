@@ -1,0 +1,9 @@
+C:\Progs\Ameer\RightClient\Test\bin\Debug\Test.exe.config
+C:\Progs\Ameer\RightClient\Test\bin\Debug\Test.exe
+C:\Progs\Ameer\RightClient\Test\bin\Debug\Test.pdb
+C:\Progs\Ameer\RightClient\Test\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Progs\Ameer\RightClient\Test\obj\x86\Debug\Test.exe
+C:\Progs\Ameer\RightClient\Test\obj\x86\Debug\Test.pdb
+C:\Progs\Ameer\RightClient\Test\bin\Debug\RightClient.dll
+C:\Progs\Ameer\RightClient\Test\bin\Debug\Microsoft.Http.dll
+C:\Progs\Ameer\RightClient\Test\bin\Debug\RightClient.pdb

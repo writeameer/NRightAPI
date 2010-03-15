@@ -1,0 +1,90 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Microsoft.Http;
+using Microsoft.Http.Headers;
+using System.Web;
+
+namespace RightClient
+{
+    public class NRightApi
+    {
+        static string ApiVersion { get; set; }
+        static string LogFile { get; set; }
+        static string ApiUrl { get; set; }
+        static string Account { get; set; }
+        static Cookie SessionCookie { get; set; }
+        static HttpClient HttpClient { get; set;}
+
+        public const HttpMethod Get = HttpMethod.GET;
+        public const HttpMethod Post = HttpMethod.POST;
+        public const HttpMethod Put = HttpMethod.PUT;
+        public const HttpMethod Delete = HttpMethod.DELETE;
+
+
+
+        public NRightApi ()
+        {
+            // Set default values for public properties
+            ApiVersion = "1.0";
+            ApiUrl = "https://my.rightscale.com/api/acct/";
+            SessionCookie = new Cookie();
+        }
+
+        public void Login(string username, string password, string account)
+        {
+            var httpClient = new HttpClient(ApiUrl);
+            
+            Account = account;
+
+
+            httpClient.DefaultHeaders.Add("X-API-VERSION: " + ApiVersion);
+            httpClient.DefaultHeaders.Authorization = Credential.CreateBasic(username, password);
+
+            var response = httpClient.Get(ApiUrl + account + "/login");
+
+            var sessionId = response.Headers["Set-Cookie"].Split(';')[0].Split('=')[1];
+            SessionCookie.Add("_session_id", sessionId);
+        }
+
+        public HttpResponseMessage Send (HttpMethod httpMethod, string apiString, params string[] parameters)
+        {
+  
+            // Return null if no RightScale session cookie was issued
+            if (SessionCookie == null)
+            {
+               Console.WriteLine("No RightScale session cookie! Please use the Login method to receive one.");
+               return  null;
+            }
+
+            // Create httpClient with session cookie
+            var httpClient = new HttpClient
+                                 {
+                                     BaseAddress = new Uri(ApiUrl + Account + "/"),
+                                     TransportSettings = {MaximumAutomaticRedirections = 0}
+                                 };
+            
+            httpClient.DefaultHeaders.Cookie.Add(SessionCookie);
+            httpClient.DefaultHeaders.Add("X-API-VERSION: " + ApiVersion);
+
+
+            // Add parameters to HttpContent
+            HttpContent content = null;
+            var form = new HttpUrlEncodedForm();
+
+            if (parameters != null) {
+                foreach(var p in parameters)
+                    form.Add(p.Split('=')[0],p.Split('=')[1]);
+                content = form.CreateHttpContent();
+            }
+
+            // Make REST call and return HTTP response object
+            var response = (parameters.Count() == 0) ? httpClient.Send(httpMethod, apiString) : httpClient.Send(httpMethod, apiString, content);
+            
+            return response;
+
+        }
+
+    }
+}

@@ -1,0 +1,6 @@
+C:\Progs\Ameer\RightClient\RightClient\bin\Debug\RightClient.dll
+C:\Progs\Ameer\RightClient\RightClient\bin\Debug\RightClient.pdb
+C:\Progs\Ameer\RightClient\RightClient\bin\Debug\Microsoft.Http.dll
+C:\Progs\Ameer\RightClient\RightClient\obj\Debug\ResolveAssemblyReference.cache
+C:\Progs\Ameer\RightClient\RightClient\obj\Debug\RightClient.dll
+C:\Progs\Ameer\RightClient\RightClient\obj\Debug\RightClient.pdb
