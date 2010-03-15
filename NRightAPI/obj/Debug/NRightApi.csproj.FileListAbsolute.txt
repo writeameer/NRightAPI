@@ -4,9 +4,9 @@ C:\Progs\Ameer\RightClient\RightClient\bin\Debug\Microsoft.Http.dll
 C:\Progs\Ameer\RightClient\RightClient\obj\Debug\ResolveAssemblyReference.cache
 C:\Progs\Ameer\RightClient\RightClient\obj\Debug\RightClient.dll
 C:\Progs\Ameer\RightClient\RightClient\obj\Debug\RightClient.pdb
-C:\Users\Ameer\.ssh\NRightAPI\NRightAPI\bin\Debug\RightClient.dll
-C:\Users\Ameer\.ssh\NRightAPI\NRightAPI\bin\Debug\RightClient.pdb
 C:\Users\Ameer\.ssh\NRightAPI\NRightAPI\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Ameer\.ssh\NRightAPI\NRightAPI\obj\Debug\RightClient.dll
-C:\Users\Ameer\.ssh\NRightAPI\NRightAPI\obj\Debug\RightClient.pdb
 C:\Users\Ameer\.ssh\NRightAPI\NRightAPI\bin\Debug\Microsoft.Http.dll
+C:\Users\Ameer\.ssh\NRightAPI\NRightAPI\bin\Debug\NRightApi.dll
+C:\Users\Ameer\.ssh\NRightAPI\NRightAPI\bin\Debug\NRightApi.pdb
+C:\Users\Ameer\.ssh\NRightAPI\NRightAPI\obj\Debug\NRightApi.dll
+C:\Users\Ameer\.ssh\NRightAPI\NRightAPI\obj\Debug\NRightApi.pdb
