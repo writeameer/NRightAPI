@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Microsoft.Http;
 using Microsoft.Http.Headers;
-using System.Web;
+
 
 namespace RightClient
 {
@@ -75,16 +73,22 @@ namespace RightClient
             HttpContent content = null;
             var form = new HttpUrlEncodedForm();
             
+            // Add parameters to request if any
             if (parameters != null && parameters.Length!=0) {
                 foreach(var p in parameters)
                     form.Add(p.Split('=')[0],p.Split('=')[1]);
                 content = form.CreateHttpContent();
+
+                // Make REST request with parameters
+                response = httpClient.Send(httpMethod, apiString, content);
+            }
+            else
+            {
+                // Make REST request without parameters
+                response = httpClient.Send(httpMethod, apiString);
             }
 
-            // Make REST call and return HTTP response object
-            if (parameters != null)
-                response = (parameters.Count() == 0) ? httpClient.Send(httpMethod, apiString) : httpClient.Send(httpMethod, apiString, content);
-
+            // Return response
             return response;
         }
 
