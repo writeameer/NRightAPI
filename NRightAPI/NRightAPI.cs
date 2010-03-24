@@ -10,12 +10,10 @@ namespace RightClient
 {
     public class NRightApi
     {
-        static string ApiVersion { get; set; }
-        static string LogFile { get; set; }
+        public static string ApiVersion { get; set; }
         static string ApiUrl { get; set; }
         static string Account { get; set; }
         static Cookie SessionCookie { get; set; }
-        static HttpClient HttpClient { get; set;}
 
         public const HttpMethod Get = HttpMethod.GET;
         public const HttpMethod Post = HttpMethod.POST;
@@ -31,6 +29,7 @@ namespace RightClient
             ApiUrl = "https://my.rightscale.com/api/acct/";
             SessionCookie = new Cookie();
         }
+
 
         public void Login(string username, string password, string account)
         {
@@ -48,9 +47,12 @@ namespace RightClient
             SessionCookie.Add("_session_id", sessionId);
         }
 
+
         public HttpResponseMessage Send (HttpMethod httpMethod, string apiString, params string[] parameters)
         {
-  
+
+            HttpResponseMessage response = null;
+
             // Return null if no RightScale session cookie was issued
             if (SessionCookie == null)
             {
@@ -72,19 +74,56 @@ namespace RightClient
             // Add parameters to HttpContent
             HttpContent content = null;
             var form = new HttpUrlEncodedForm();
-
-            if (parameters != null) {
+            
+            if (parameters != null && parameters.Length!=0) {
                 foreach(var p in parameters)
                     form.Add(p.Split('=')[0],p.Split('=')[1]);
                 content = form.CreateHttpContent();
             }
 
             // Make REST call and return HTTP response object
-            var response = (parameters.Count() == 0) ? httpClient.Send(httpMethod, apiString) : httpClient.Send(httpMethod, apiString, content);
-            
-            return response;
+            if (parameters != null)
+                response = (parameters.Count() == 0) ? httpClient.Send(httpMethod, apiString) : httpClient.Send(httpMethod, apiString, content);
 
+            return response;
         }
+
+        public static void DisplayRestResponse(HttpResponseMessage restResponse)
+        {
+            var content = restResponse.Content.ReadAsString();
+            var statusCode = restResponse.StatusCode;
+
+
+            Console.WriteLine("Status Code:" + statusCode);
+
+            if (restResponse.Headers.ContainsKey("Location")) 
+                Console.WriteLine("Location:" + restResponse.Headers["Location"]);
+
+            if (!String.IsNullOrEmpty(content))
+                Console.WriteLine(content);
+        }
+
+
+        public HttpResponseMessage GetRequest(string apiString, string[] parameters)
+        {
+            return parameters == null ? Send(Get, apiString) : Send(Get, apiString, parameters);
+        }
+
+        public HttpResponseMessage PostRequest(string apiString, string[] parameters)
+        {
+            return parameters == null ? Send(Post, apiString) : Send(Post, apiString, parameters);
+        }
+
+        public HttpResponseMessage PutRequest(string apiString, string[] parameters)
+        {
+            return parameters == null ? Send(Put, apiString) : Send(Put, apiString, parameters);
+        }
+
+        public HttpResponseMessage DeleteRequest(string apiString, string[] parameters)
+        {
+            return parameters == null ? Send(Delete, apiString) : Send(Delete, apiString, parameters);
+        }
+
 
     }
 }

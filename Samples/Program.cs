@@ -13,25 +13,42 @@ namespace RightClient
         {
             var api = new NRightApi();
             
-            
-            /*
-            api.Login("user@host.com", "mypassword", "RightScaleAccountNumber");
+            // Log in to RightScale 
+            api.Login("user@domain.com", "password", "rightscale account number");
+            var paramaters = new string[]{ "s", "b"};
+
+            // Example: Get All Right Scipts
+            var restResponse = api.GetRequest("right_scripts.xml", null);
+       
+            NRightApi.DisplayRestResponse(restResponse);
 
             
-            var scriptsResponse = api.Send(NRightApi.Get, "right_scripts.xml");
-
-            Console.WriteLine(scriptsResponse.Content.ReadAsString());
-
-            var deploymentResponse = api.Send(
-                NRightApi.Post, "deployments",
-                 "deployment[nickname]=Test Deployment",
-                 "deployment[description]=Test Deployment Description"
+            // Example: Create a server template
+             restResponse = api.Send(
+                NRightApi.Post,"server_templates",
+                "server_template[nickname]=template nickname",
+                "server_template[description]=template description",
+                "server_template[multi_cloud_image_href]=http://<multicloudhref>",
+                "server_template[instance_type]=m1.small"
                 );
 
 
-            Console.WriteLine(deploymentResponse.Headers["Location"]);
-             
-            */
+            NRightApi.DisplayRestResponse(restResponse);
+
+            // Example: Create Server
+            restResponse = api.Send(
+                NRightApi.Post, "servers",
+                "server[cloud_id]=1",
+                "server[nickname]=Server nickname",
+                "server[server_template_href]=http://<server template href>",
+                "server[ec2_ssh_key_href]=https://<ssh key href>",
+                "server[ec2_security_groups_href]=https://<security gorup href>",
+                "server[deployment_href]=<https://deployment href>",
+                "server[instance_type]=m1.small"
+                );
+
+            NRightApi.DisplayRestResponse(restResponse);
+
         
         }
     }
