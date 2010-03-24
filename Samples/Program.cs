@@ -15,7 +15,6 @@ namespace RightClient
             
             // Log in to RightScale 
             api.Login("user@domain.com", "password", "rightscale account number");
-            var paramaters = new string[]{ "s", "b"};
 
             // Example: Get All Right Scipts
             var restResponse = api.GetRequest("right_scripts.xml", null);
