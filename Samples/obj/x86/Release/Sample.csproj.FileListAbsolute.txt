@@ -1,0 +1,5 @@
+C:\Users\Ameer\.ssh\NRightAPI\Samples\bin\Release\NRightApi.dll
+C:\Users\Ameer\.ssh\NRightAPI\Samples\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Ameer\.ssh\NRightAPI\Samples\bin\Release\Sample.exe.config
+C:\Users\Ameer\.ssh\NRightAPI\Samples\bin\Release\Sample.exe
+C:\Users\Ameer\.ssh\NRightAPI\Samples\obj\x86\Release\Sample.exe

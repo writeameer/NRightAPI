@@ -1,0 +1,3 @@
+C:\Users\Ameer\.ssh\NRightAPI\NRightAPI\bin\Release\NRightApi.dll
+C:\Users\Ameer\.ssh\NRightAPI\NRightAPI\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Ameer\.ssh\NRightAPI\NRightAPI\obj\Release\NRightApi.dll
