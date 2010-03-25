@@ -38,7 +38,7 @@ namespace RightClient
             api.Login("user@domain.com", "password", "rightscale account number");
            
             // Example: Get All Right Scipts
-            var restResponse = api.GetRequest("right_scripts.xml", null);
+            var restResponse = api.Send(NRightApi.Get, "right_scripts.xml");
        
             NRightApi.DisplayRestResponse(restResponse);
             
