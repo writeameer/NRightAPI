@@ -1,0 +1,7 @@
+NRightAPI.dll
+
+A generic API wrapper to interface with the RightScale Cloud Computing API using the .NET framework. Requires Microsoft’s WCF Rest Starter Kit. The NRightAPI.dll in the downloads area is ILMerged with the Microsoft.Http DLL and should be all that you need.
+
+Powershell Sample
+C# Sample
+The main code for the library is here .
