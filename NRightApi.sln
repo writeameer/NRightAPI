@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRightApi", "NRightAPI\NRightApi.csproj", "{3C2996CD-47C7-467A-81D8-F922FDF30C77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Samples\Sample.csproj", "{5AFD82B9-0DFC-488C-AB4B-DCA3BBDE99A2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "SampleProject\Sample.csproj", "{5AFD82B9-0DFC-488C-AB4B-DCA3BBDE99A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
