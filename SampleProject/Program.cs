@@ -25,6 +25,7 @@ The views and conclusions contained in the software and documentation are those 
 authors and should not be interpreted as representing official policies, either expressed
 or implied, of <copyright holder>.
 */
+using RightClient;
 
 namespace RightClient
 {
@@ -32,7 +33,7 @@ namespace RightClient
     {
         static void Main(string[] args)
         {
-            var api = new NRightApi();
+            var api = new RightClient.NRightApi();
             
             // Log in to RightScale 
             api.Login("user@domain.com", "password", "rightscale account number");
