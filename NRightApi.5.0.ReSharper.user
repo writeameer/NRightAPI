@@ -3,35 +3,46 @@
     <string />
     <integer />
     <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
       <setting name="SolutionAnalysisEnabled">False</setting>
     </boolean>
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="3515" fromTop="15" />
+      <File id="5AFD82B9-0DFC-488C-AB4B-DCA3BBDE99A2/f:Program.cs" caret="2302" fromTop="20" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="7875" fromTop="161" />
     </RecentFiles>
     <RecentEdits>
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="2050" fromTop="19" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="5614" fromTop="12" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="5405" fromTop="5" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="5824" fromTop="15" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="6094" fromTop="20" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="4737" fromTop="33" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="3131" fromTop="13" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="4677" fromTop="11" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="4966" fromTop="26" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="5181" fromTop="22" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="5181" fromTop="22" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="5179" fromTop="22" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="5264" fromTop="18" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="2349" fromTop="19" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="1550" fromTop="0" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="4126" fromTop="8" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="4408" fromTop="14" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="4579" fromTop="19" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="4675" fromTop="22" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="0" fromTop="0" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="1533" fromTop="25" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="4118" fromTop="35" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="5597" fromTop="25" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="5597" fromTop="29" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="5597" fromTop="29" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="7339" fromTop="21" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="6601" fromTop="17" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="5597" fromTop="24" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="6024" fromTop="18" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="1695" fromTop="12" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="3253" fromTop="6" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="4062" fromTop="33" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="2440" fromTop="3" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="3031" fromTop="16" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="2919" fromTop="14" />
+      <File id="5AFD82B9-0DFC-488C-AB4B-DCA3BBDE99A2/f:Program.cs" caret="2756" fromTop="37" />
+      <File id="5AFD82B9-0DFC-488C-AB4B-DCA3BBDE99A2/f:Program.cs" caret="1951" fromTop="17" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="4509" fromTop="38" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="4319" fromTop="33" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="5646" fromTop="20" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="5266" fromTop="27" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="5044" fromTop="22" />
+      <File id="5AFD82B9-0DFC-488C-AB4B-DCA3BBDE99A2/f:Program.cs" caret="1831" fromTop="15" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="2384" fromTop="14" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="5565" fromTop="22" />
+      <File id="5AFD82B9-0DFC-488C-AB4B-DCA3BBDE99A2/f:Program.cs" caret="2228" fromTop="21" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="6443" fromTop="28" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="6024" fromTop="18" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="6028" fromTop="17" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="5893" fromTop="6" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="1550" fromTop="9" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -47,30 +58,30 @@
   </UnitTestRunnerNUnit>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="var" priority="4" />
+      <Item value="var" priority="14" />
       <Item value="Send`0" priority="1" />
       <Item value="httpMethod" priority="0" />
-      <Item value="apiString" priority="1" />
-      <Item value="new" priority="3" />
-      <Item value="string" priority="4" />
-      <Item value="return" priority="1" />
-      <Item value="response" priority="1" />
-      <Item value="null" priority="7" />
-      <Item value="Console`0" priority="3" />
-      <Item value="api" priority="3" />
-      <Item value="NRightApi`0" priority="5" />
-      <Item value="public" priority="0" />
-      <Item value="static" priority="0" />
-      <Item value="void" priority="0" />
-      <Item value="restResponse" priority="4" />
+      <Item value="apiString" priority="3" />
+      <Item value="new" priority="6" />
+      <Item value="string" priority="14" />
+      <Item value="return" priority="6" />
+      <Item value="response" priority="8" />
+      <Item value="null" priority="8" />
+      <Item value="Console`0" priority="4" />
+      <Item value="api" priority="8" />
+      <Item value="NRightApi`0" priority="17" />
+      <Item value="public" priority="7" />
+      <Item value="static" priority="5" />
+      <Item value="void" priority="3" />
+      <Item value="restResponse" priority="5" />
       <Item value="ValueType`0" priority="0" />
-      <Item value="if" priority="2" />
-      <Item value="content" priority="1" />
-      <Item value="String`0" priority="1" />
+      <Item value="if" priority="6" />
+      <Item value="content" priority="2" />
+      <Item value="String`0" priority="2" />
       <Item value="HttpResponseMessage" priority="0" />
-      <Item value="parameters" priority="4" />
+      <Item value="parameters" priority="8" />
       <Item value="Nullable`0" priority="0" />
-      <Item value="else" priority="1" />
+      <Item value="else" priority="4" />
       <Item value="restresponse" priority="2" />
       <Item value="Count`1" priority="0" />
       <Item value="Length" priority="1" />
@@ -83,35 +94,75 @@
       <Item value="e" priority="1" />
       <Item value="NullReferenceException`0" priority="0" />
       <Item value="Environment`0" priority="0" />
+      <Item value="SessionCookie" priority="1" />
+      <Item value="DateTime`0" priority="0" />
+      <Item value="httpClient" priority="8" />
+      <Item value="System" priority="3" />
+      <Item value="Net" priority="3" />
+      <Item value="ServicePointManager`0" priority="1" />
+      <Item value="ServicePoint`0" priority="0" />
+      <Item value="AuthenticationLevel`0" priority="0" />
+      <Item value="SecurityProtocolType`0" priority="0" />
+      <Item value="a" priority="2" />
+      <Item value="Uri" priority="0" />
+      <Item value="p" priority="2" />
+      <Item value="delim" priority="1" />
+      <Item value="switch" priority="0" />
+      <Item value="case" priority="2" />
+      <Item value="break" priority="1" />
+      <Item value="parameterString" priority="7" />
+      <Item value="HttpServerUtility`0" priority="0" />
+      <Item value="HttpUtility`0" priority="1" />
+      <Item value="HttpResponseMessage`0" priority="0" />
+      <Item value="Post" priority="0" />
+      <Item value="PostRequest`0" priority="0" />
+      <Item value="HttpClient`0" priority="0" />
+      <Item value="this" priority="0" />
+      <Item value="foreach" priority="1" />
+      <Item value="parameter" priority="1" />
+      <Item value="Account" priority="0" />
+      <Item value="account" priority="1" />
+      <Item value="Int32`0" priority="0" />
+      <Item value="key" priority="0" />
+      <Item value="HttpClient" priority="0" />
+      <Item value="value" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@RightClient.NRightApi">
-      <Item value="Post" priority="4" />
-      <Item value="Get" priority="3" />
-      <Item value="DisplayRestResponse`0" priority="1" />
+      <Item value="Post" priority="7" />
+      <Item value="Get" priority="7" />
+      <Item value="DisplayRestResponse`0" priority="2" />
       <Item value="Delete" priority="0" />
       <Item value="Put" priority="1" />
+      <Item value="SessionCookie" priority="1" />
+      <Item value="Account" priority="0" />
+      <Item value="SetSessionId`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Console">
-      <Item value="WriteLine`0" priority="5" />
+      <Item value="WriteLine`0" priority="7" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Microsoft.Http.HttpResponseMessage">
       <Item value="Content" priority="1" />
       <Item value="Headers" priority="2" />
-      <Item value="StatusCode" priority="0" />
+      <Item value="StatusCode" priority="4" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Microsoft.Http.HttpContent">
       <Item value="ReadAsString`0" priority="1" />
       <Item value="ToString`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:RightClient.NRightApi">
-      <Item value="Send`0" priority="1" />
-      <Item value="GetRequest`0" priority="1" />
+      <Item value="Send`0" priority="3" />
+      <Item value="GetRequest`0" priority="3" />
+      <Item value="SetSessionCookie`0" priority="1" />
+      <Item value="PostRequest`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
-      <Item value="IsNullOrEmpty`0" priority="1" />
+      <Item value="IsNullOrEmpty`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.String">
-      <Item value="Indexer" priority="0" />
+      <Item value="Indexer" priority="1" />
+      <Item value="IndexOf`0" priority="0" />
+      <Item value="Substring`0" priority="1" />
+      <Item value="Length" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Exception">
       <Item value="StackTrace" priority="0" />
@@ -122,6 +173,43 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Environment">
       <Item value="Exit`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Http.Headers.Cookie">
+      <Item value="Indexer" priority="0" />
+      <Item value="Expires" priority="0" />
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="0" />
+      <Item value="Today" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="Subtract`0" priority="1" />
+      <Item value="AddDays`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Http.HttpClient">
+      <Item value="TransportSettings" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Http.HttpWebRequestTransportSettings">
+      <Item value="AuthenticationLevel" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Net.Security.AuthenticationLevel">
+      <Item value="None" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Net.ServicePointManager">
+      <Item value="FindServicePoint`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.ServicePoint">
+      <Item value="Address" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.HttpUtility">
+      <Item value="UrlEncode`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="Parse`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.HttpStatusCode">
+      <Item value="ToStringInvariant`0" priority="1" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

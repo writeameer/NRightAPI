@@ -1,12 +1,20 @@
-# Load NRightAPI.dll assembly
-[Reflection.Assembly]::LoadFile((Get-Location).Path + "\NRightAPI.dll")
-$api = new-object RightClient.NRightAPI
- 
-# Login to RightScale 
-$api.Login("<rightscale username>","<rightscale password>","<rightscale account number>")
 
-# Get RightScripts from your RightScale Account
-$response = $api.GetRequest("right_scripts.xml",$null)
+
+# dot-sourcing Login.ps1 to login to RightScale
+. .\Login.ps1
+
+# Get All Servers
+$response = $api.GetRequest("servers.xml",$null)
  
-# Output the rightscripts from the HTTP response
-[RightClient.NRightAPI]::DisplayRestResponse($response)
+$servers = [xml] $response.Content.ReadAsString()
+$myserver = $servers.servers.server | where {$_.nickname -eq "T1.Dev.CES11_8.SmtpDNS.i386"}
+$serverid = $myserver.href.Split("/")[$myserver.href.Split("/").Length - 1 ]
+$response = $api.GetRequest("servers/" + $serverid + "/settings",$null)
+
+[xml] $serverSettings = $response.Content.ReadAsString()
+
+#Output server details
+($serverSettings.settings)
+
+# Get Private IP address
+($serverSettings.settings)."private-ip-address"

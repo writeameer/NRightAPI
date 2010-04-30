@@ -25,7 +25,9 @@ The views and conclusions contained in the software and documentation are those 
 authors and should not be interpreted as representing official policies, either expressed
 or implied, of <copyright holder>.
 */
-using RightClient;
+
+
+using System;
 
 namespace RightClient
 {
@@ -33,43 +35,32 @@ namespace RightClient
     {
         static void Main(string[] args)
         {
-            var api = new RightClient.NRightApi();
             
+
+            // Username, passwords and account can be assigned directly as strings here
+            // I'm using system variable to avoid accidentally checking in my RightScale credentials :)
+
+            var username = Environment.GetEnvironmentVariable("RS_username", EnvironmentVariableTarget.Machine);
+            var password = Environment.GetEnvironmentVariable("RS_password", EnvironmentVariableTarget.Machine);
+            var account = Environment.GetEnvironmentVariable("RS_acct", EnvironmentVariableTarget.Machine);
+
+
+            // Instantiate NRightAPI using RS account number
+            var api = new NRightApi(account);
+
             // Log in to RightScale 
-            api.Login("user@domain.com", "password", "rightscale account number");
+            api.Login(username, password);
+            
+            // Example: Get default deployments
+            var parameters = new string[]
+                                 {
+                                     "filter=nickname=default"
+                                 };
            
-            // Example: Get All Right Scipts
-            var restResponse = api.Send(NRightApi.Get, "right_scripts.xml");
-       
+            var restResponse = api.Send(NRightApi.Get,"deployments.xml",parameters);
             NRightApi.DisplayRestResponse(restResponse);
             
-            // Example: Create a server template
-             restResponse = api.Send(
-                NRightApi.Post,"server_templates",
-                "server_template[nickname]=template nickname",
-                "server_template[description]=template description",
-                "server_template[multi_cloud_image_href]=http://<multicloudhref>",
-                "server_template[instance_type]=m1.small"
-                );
 
-
-            NRightApi.DisplayRestResponse(restResponse);
-
-            // Example: Create Server
-            restResponse = api.Send(
-                NRightApi.Post, "servers",
-                "server[cloud_id]=1",
-                "server[nickname]=Server nickname",
-                "server[server_template_href]=http://<server template href>",
-                "server[ec2_ssh_key_href]=https://<ssh key href>",
-                "server[ec2_security_groups_href]=https://<security gorup href>",
-                "server[deployment_href]=<https://deployment href>",
-                "server[instance_type]=m1.small"
-                );
-
-            NRightApi.DisplayRestResponse(restResponse);
-
-        
         }
     }
 }

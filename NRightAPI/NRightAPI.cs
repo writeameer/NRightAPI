@@ -27,55 +27,97 @@ or implied, of <copyright holder>.
 */
 
 using System;
+using System.Net;
+using System.Web;
 using Microsoft.Http;
 using Microsoft.Http.Headers;
+using Cookie = Microsoft.Http.Headers.Cookie;
+
+
 
 
 namespace RightClient
 {
     public class NRightApi
     {
-        public static string ApiVersion { get; set; }
-        static string ApiUrl { get; set; }
-        static string Account { get; set; }
-        static Cookie SessionCookie { get; set; }
+
 
         public const HttpMethod Get = HttpMethod.GET;
         public const HttpMethod Post = HttpMethod.POST;
         public const HttpMethod Put = HttpMethod.PUT;
         public const HttpMethod Delete = HttpMethod.DELETE;
 
+        public static string ApiVersion { get; set; }
+        static string ApiUrl { get; set; }
+        static Cookie SessionCookie { get; set; }
+        public static string Account { get; set; }
+        
+        public static HttpClient HttpClient;
 
 
-        public NRightApi ()
+
+
+
+        public NRightApi(string account): this(account,"1.0")
         {
+            // Set API version to default to 1.0
+        }
+
+        public NRightApi(string account, string version)
+        {
+            // Forcing SSLv3 after RightScale upgraded cert to V3 on April 14th 2010
+            ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Ssl3;
+
             // Set default values for public properties
-            ApiVersion = "1.0";
+            ApiVersion = version;
             ApiUrl = "https://my.rightscale.com/api/acct/";
             SessionCookie = new Cookie();
+
+            // Initialize static HTTPClient
+            Account = account;
+            HttpClient = new HttpClient
+            {
+                BaseAddress = new Uri(ApiUrl + Account + "/"),
+                TransportSettings = { MaximumAutomaticRedirections = 0 }
+            };
+
+            // Add API version to HttpClient
+            HttpClient.DefaultHeaders.Add("X-API-VERSION: " + ApiVersion);
         }
 
-
-        public void Login(string username, string password, string account)
+        public void Login(string username, string password)
         {
-            var httpClient = new HttpClient(ApiUrl);
+
+            var client = new HttpClient(); 
+
+            // Add RightScale API version header
+            client.DefaultHeaders.Add("X-API-VERSION: " + ApiVersion);
+
+            // Add authentication header and execute login method
+            client.DefaultHeaders.Authorization = Credential.CreateBasic(username, password);
+            var response = client.Get(ApiUrl + Account + "/login");
             
-            Account = account;
-
-
-            httpClient.DefaultHeaders.Add("X-API-VERSION: " + ApiVersion);
-            httpClient.DefaultHeaders.Authorization = Credential.CreateBasic(username, password);
-
-            var response = httpClient.Get(ApiUrl + account + "/login");
-
+            // Get RightScale session cookie from HTTP header
             var sessionId = response.Headers["Set-Cookie"].Split(';')[0].Split('=')[1];
             SessionCookie.Add("_session_id", sessionId);
+
+            // Add session cookie to static HttpClient
+            HttpClient.DefaultHeaders.Cookie.Add(SessionCookie);
+
+            
         }
 
-
-        public HttpResponseMessage Send (HttpMethod httpMethod, string apiString, params string[] parameters)
+        public static void SetSessionId(string sessionId)
         {
+            // Create Session Id cookie
+            SessionCookie.Add("_session_id", sessionId);
 
+            // Add Session Id cookie to static HttpClient
+            HttpClient.DefaultHeaders.Cookie.Add(SessionCookie);
+        }
+        public HttpResponseMessage Send (HttpMethod httpMethod, string restMethod, params string[] parameters)
+        {
+            
             HttpResponseMessage response = null;
 
             // Return null if no RightScale session cookie was issued
@@ -85,39 +127,69 @@ namespace RightClient
                return  null;
             }
 
-            // Create httpClient with session cookie
-            var httpClient = new HttpClient
-                                 {
-                                     BaseAddress = new Uri(ApiUrl + Account + "/"),
-                                     TransportSettings = {MaximumAutomaticRedirections = 0}
-                                 };
-            
-            httpClient.DefaultHeaders.Cookie.Add(SessionCookie);
-            httpClient.DefaultHeaders.Add("X-API-VERSION: " + ApiVersion);
 
-
-            // Add parameters to HttpContent
-            HttpContent content = null;
-            var form = new HttpUrlEncodedForm();
-            
-            // Add parameters to request if any
-            if (parameters != null && parameters.Length!=0) {
-                foreach(var p in parameters)
-                    form.Add(p.Split('=')[0],p.Split('=')[1]);
-                content = form.CreateHttpContent();
-
-                // Make REST request with parameters
-                response = httpClient.Send(httpMethod, apiString, content);
-            }
+            // Check if parameters were passed
+            if (parameters.Length==0)
+                // Make REST request without parameters
+                response = HttpClient.Send(httpMethod, restMethod);
             else
             {
-                // Make REST request without parameters
-                response = httpClient.Send(httpMethod, apiString);
+                // Make REST request with parameters
+                response = httpMethod == Post ? SendPostRequest(HttpClient, restMethod, parameters) : SendRequest(HttpClient, restMethod, parameters);
             }
 
-            // Return response
+            // Check Http response for errors
+            CheckHttpResponseForErrors(response);
+
             return response;
         }
+
+        public static void CheckHttpResponseForErrors (HttpResponseMessage response)
+        {
+            // Check for errors in the HTTP response status code and throw exception
+            // if status code not in 200 - 2XX range
+            
+            return;
+        }
+
+        public static HttpResponseMessage SendRequest(HttpClient httpClient, string restMethod, string[] parameters)
+        {
+            var parameterString = "";
+
+            // Construct parameter query string
+            foreach (var p in parameters)
+            {
+                var delim = p.IndexOf("=");
+                var key = p.Substring(0, delim);
+                var value = p.Substring(delim + 1, p.Length - delim - 1);
+
+                parameterString = parameterString + key + "=" + HttpUtility.UrlEncode(value) + "&";
+            }
+
+            // Make REST request with parameters
+            return httpClient.Send(Get, restMethod + "?" + parameterString);
+        }
+
+        public static HttpResponseMessage SendPostRequest(HttpClient httpClient, string restMethod, string[] parameters)
+        {
+            HttpContent content = null;
+            var form = new HttpUrlEncodedForm();
+
+            // Create post data from parameters
+            foreach (var p in parameters)
+            {
+                var delim = p.IndexOf("=");
+                var key = p.Substring(0, delim);
+                var value = p.Substring(delim + 1, p.Length - delim - 1);
+                form.Add(key, value);
+            }
+            content = form.CreateHttpContent();
+
+            // Make REST request with parameters
+            return  httpClient.Send(Post, restMethod, content);
+        }
+
+
 
         public static void DisplayRestResponse(HttpResponseMessage restResponse)
         {

@@ -15,3 +15,11 @@ C:\Users\Ameer\.ssh\NRightAPI\Samples\obj\x86\Debug\Test.exe
 C:\Users\Ameer\.ssh\NRightAPI\Samples\obj\x86\Debug\Test.pdb
 C:\Users\Ameer\.ssh\NRightAPI\Samples\bin\Debug\NRightApi.dll
 C:\Users\Ameer\.ssh\NRightAPI\Samples\bin\Debug\NRightApi.pdb
+C:\Users\Ameer\.ssh\NRightAPI\SampleProject\bin\Debug\Sample.exe.config
+C:\Users\Ameer\.ssh\NRightAPI\SampleProject\bin\Debug\Sample.exe
+C:\Users\Ameer\.ssh\NRightAPI\SampleProject\bin\Debug\Sample.pdb
+C:\Users\Ameer\.ssh\NRightAPI\SampleProject\bin\Debug\NRightApi.dll
+C:\Users\Ameer\.ssh\NRightAPI\SampleProject\bin\Debug\NRightApi.pdb
+C:\Users\Ameer\.ssh\NRightAPI\SampleProject\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Ameer\.ssh\NRightAPI\SampleProject\obj\x86\Debug\Sample.exe
+C:\Users\Ameer\.ssh\NRightAPI\SampleProject\obj\x86\Debug\Sample.pdb
