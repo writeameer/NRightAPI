@@ -3,16 +3,16 @@
 
 
 # Get All Servers
-$myServerNickname = "VA.Dev.LAMP_AutoScale_LoadBalance_ebsdb1"
+$myServerNickname = "VA.Dev.Management.WSUS-EC2.m1.small.USEast"
 
 $response = $api.GetRequest("servers.xml","filter=nickname=" + $myServerNickname)
 
 
 # Get servers from Content body
-$servers = [xml] $response.Content.ReadAsString()
+$serverXml = [xml] $response.Content.ReadAsString()
 
 # Get server details from XML
-$myServer = $servers.servers.server
+$myServer = $serverXml.servers.server
 
 # Print server details
 $myserver

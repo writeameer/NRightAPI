@@ -48,12 +48,11 @@ namespace RightClient
         public const HttpMethod Delete = HttpMethod.DELETE;
 
         public static string ApiVersion { get; set; }
-        static string ApiUrl { get; set; }
-        static Cookie SessionCookie { get; set; }
         public static string Account { get; set; }
-        
         public static HttpClient HttpClient;
 
+        public static string ApiUrl { get; set; }
+        public static Cookie SessionCookie { get; set; }
 
 
 
@@ -85,36 +84,34 @@ namespace RightClient
             HttpClient.DefaultHeaders.Add("X-API-VERSION: " + ApiVersion);
         }
 
-        public void Login(string username, string password)
+        public HttpResponseMessage Login(string username, string password)
         {
 
-            var client = new HttpClient(); 
+            var client = new HttpClient();
 
             // Add RightScale API version header
             client.DefaultHeaders.Add("X-API-VERSION: " + ApiVersion);
-
+            
             // Add authentication header and execute login method
             client.DefaultHeaders.Authorization = Credential.CreateBasic(username, password);
             var response = client.Get(ApiUrl + Account + "/login");
             
-            // Get RightScale session cookie from HTTP header
-            var sessionId = response.Headers["Set-Cookie"].Split(';')[0].Split('=')[1];
-            SessionCookie.Add("_session_id", sessionId);
+            // Get All cookies set by RightScale 
+            var allCookies = response.Headers["Set-Cookie"];
 
-            // Add session cookie to static HttpClient
-            HttpClient.DefaultHeaders.Cookie.Add(SessionCookie);
 
-            
+            // Add RightSale cookies to static HttpClient
+            HttpClient.DefaultHeaders.Cookie.AddString(allCookies);
+            return response;
         }
 
-        public static void SetSessionId(string sessionId)
+        public static void SetAuthCookies(string cookieString)
         {
-            // Create Session Id cookie
-            SessionCookie.Add("_session_id", sessionId);
-
-            // Add Session Id cookie to static HttpClient
-            HttpClient.DefaultHeaders.Cookie.Add(SessionCookie);
+            // Add RightSale cookies to static HttpClient
+            HttpClient.DefaultHeaders.Cookie.AddString(cookieString); 
         }
+
+
         public HttpResponseMessage Send (HttpMethod httpMethod, string restMethod, params string[] parameters)
         {
             
@@ -135,7 +132,7 @@ namespace RightClient
             else
             {
                 // Make REST request with parameters
-                response = httpMethod == Post ? SendPostRequest(HttpClient, restMethod, parameters) : SendRequest(HttpClient, restMethod, parameters);
+                response = httpMethod == Post ? SendPostRequest(restMethod, parameters) : SendRequest(httpMethod, restMethod, parameters);
             }
 
             // Check Http response for errors
@@ -152,7 +149,7 @@ namespace RightClient
             return;
         }
 
-        public static HttpResponseMessage SendRequest(HttpClient httpClient, string restMethod, string[] parameters)
+        public static HttpResponseMessage SendRequest(HttpMethod httpMethod, string restMethod, string[] parameters)
         {
             var parameterString = "";
 
@@ -167,10 +164,10 @@ namespace RightClient
             }
 
             // Make REST request with parameters
-            return httpClient.Send(Get, restMethod + "?" + parameterString);
+            return HttpClient.Send(httpMethod, restMethod + "?" + parameterString);
         }
 
-        public static HttpResponseMessage SendPostRequest(HttpClient httpClient, string restMethod, string[] parameters)
+        public static HttpResponseMessage SendPostRequest(string restMethod, string[] parameters)
         {
             HttpContent content = null;
             var form = new HttpUrlEncodedForm();
@@ -186,10 +183,8 @@ namespace RightClient
             content = form.CreateHttpContent();
 
             // Make REST request with parameters
-            return  httpClient.Send(Post, restMethod, content);
+            return  HttpClient.Send(Post, restMethod, content);
         }
-
-
 
         public static void DisplayRestResponse(HttpResponseMessage restResponse)
         {

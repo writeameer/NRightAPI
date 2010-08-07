@@ -28,6 +28,9 @@ or implied, of <copyright holder>.
 
 
 using System;
+using System.Linq;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace RightClient
 {
@@ -44,23 +47,31 @@ namespace RightClient
             var password = Environment.GetEnvironmentVariable("RS_password", EnvironmentVariableTarget.Machine);
             var account = Environment.GetEnvironmentVariable("RS_acct", EnvironmentVariableTarget.Machine);
 
-
+            
             // Instantiate NRightAPI using RS account number
             var api = new NRightApi(account);
 
             // Log in to RightScale 
             api.Login(username, password);
+
+            // Another way to authenticate against RS API
+            // is by setting the auth cookie in the request header
+            //NRightApi.SetAuthCookies("Cookie: rs_gbl=eNo1kLuSgjAARf8lNcwkgUjCzBbgwoo");
+
             
-            // Example: Get default deployments
+            // Get deployments
             var parameters = new string[]
                                  {
-                                     "filter=nickname=default"
+                                     "filter=nickname=VA.Dev.Unitesting.TOBEDELETED"
                                  };
+         
            
             var restResponse = api.Send(NRightApi.Get,"deployments.xml",parameters);
-            NRightApi.DisplayRestResponse(restResponse);
-            
 
+
+            // Display Content Body
+            Console.WriteLine(restResponse.Content.ReadAsString());
+           
         }
     }
 }
