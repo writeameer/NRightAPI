@@ -8,7 +8,7 @@
     <ProjectGuid>{5AFD82B9-0DFC-488C-AB4B-DCA3BBDE99A2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RightClient</RootNamespace>
+    <RootNamespace>WriteAmeer</RootNamespace>
     <AssemblyName>Sample</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
@@ -36,9 +36,8 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Http, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Software\Libraries\WcfRest\Microsoft.Http.dll</HintPath>
+    <Reference Include="Microsoft.Http">
+      <HintPath>..\NRightAPI\lib\Microsoft.Http.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

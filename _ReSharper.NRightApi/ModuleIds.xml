@@ -1,4 +1,5 @@
 <Modules>
   <Module PersistentId="5AFD82B9-0DFC-488C-AB4B-DCA3BBDE99A2" ModuleId="Sample" />
   <Module PersistentId="3C2996CD-47C7-467A-81D8-F922FDF30C77" ModuleId="NRightApi" />
+  <Module PersistentId="909251F8-FC4D-4441-A280-BFCF9D487B2D" ModuleId="NRightApi.Test" />
 </Modules>

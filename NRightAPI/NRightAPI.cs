@@ -33,10 +33,7 @@ using Microsoft.Http;
 using Microsoft.Http.Headers;
 using Cookie = Microsoft.Http.Headers.Cookie;
 
-
-
-
-namespace RightClient
+namespace WriteAmeer
 {
     public class NRightApi
     {
@@ -132,7 +129,11 @@ namespace RightClient
             else
             {
                 // Make REST request with parameters
-                response = httpMethod == Post ? SendPostRequest(restMethod, parameters) : SendRequest(httpMethod, restMethod, parameters);
+                if (httpMethod == Post || httpMethod == Put)  return SendFormData(httpMethod, restMethod, parameters);
+
+                return  SendRequest(httpMethod, restMethod, parameters);
+
+                
             }
 
             // Check Http response for errors
@@ -167,9 +168,8 @@ namespace RightClient
             return HttpClient.Send(httpMethod, restMethod + "?" + parameterString);
         }
 
-        public static HttpResponseMessage SendPostRequest(string restMethod, string[] parameters)
+        public static HttpResponseMessage SendFormData(HttpMethod httpMethod, string restMethod, string[] parameters)
         {
-            HttpContent content = null;
             var form = new HttpUrlEncodedForm();
 
             // Create post data from parameters
@@ -180,10 +180,10 @@ namespace RightClient
                 var value = p.Substring(delim + 1, p.Length - delim - 1);
                 form.Add(key, value);
             }
-            content = form.CreateHttpContent();
+            var content = form.CreateHttpContent();
 
             // Make REST request with parameters
-            return  HttpClient.Send(Post, restMethod, content);
+            return HttpClient.Send(httpMethod, restMethod, content);
         }
 
         public static void DisplayRestResponse(HttpResponseMessage restResponse)

@@ -31,8 +31,9 @@ using System;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
+using WriteAmeer;
 
-namespace RightClient
+namespace WriteAmeer
 {
     class Program
     {
@@ -60,8 +61,7 @@ namespace RightClient
 
             
             // Get deployments
-            var parameters = new string[]
-                                 {
+            var parameters = new [] {
                                      "filter=nickname=VA.Dev.Unitesting.TOBEDELETED"
                                  };
          

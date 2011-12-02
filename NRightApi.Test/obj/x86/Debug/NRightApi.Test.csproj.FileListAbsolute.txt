@@ -1,0 +1,10 @@
+C:\Progs\NRightAPI\NRightApi.Test\bin\Debug\NRightApi.Test.pdb
+C:\Progs\NRightAPI\NRightApi.Test\bin\Debug\NRightApi.dll
+C:\Progs\NRightAPI\NRightApi.Test\bin\Debug\nunit.framework.dll
+C:\Progs\NRightAPI\NRightApi.Test\bin\Debug\Microsoft.Http.dll
+C:\Progs\NRightAPI\NRightApi.Test\bin\Debug\NRightApi.pdb
+C:\Progs\NRightAPI\NRightApi.Test\bin\Debug\nunit.framework.xml
+C:\Progs\NRightAPI\NRightApi.Test\obj\x86\Debug\NRightApi.Test.pdb
+C:\Progs\NRightAPI\NRightApi.Test\bin\Debug\NRightApi.Test.dll
+C:\Progs\NRightAPI\NRightApi.Test\obj\x86\Debug\NRightApi.Test.dll
+C:\Progs\NRightAPI\NRightApi.Test\obj\x86\Debug\NRightApi.Test.csprojResolveAssemblyReference.cache

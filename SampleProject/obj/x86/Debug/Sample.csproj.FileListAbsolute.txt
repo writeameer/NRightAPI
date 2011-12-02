@@ -23,3 +23,12 @@ C:\Users\Ameer\.ssh\NRightAPI\SampleProject\bin\Debug\NRightApi.pdb
 C:\Users\Ameer\.ssh\NRightAPI\SampleProject\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Ameer\.ssh\NRightAPI\SampleProject\obj\x86\Debug\Sample.exe
 C:\Users\Ameer\.ssh\NRightAPI\SampleProject\obj\x86\Debug\Sample.pdb
+C:\Progs\NRightAPI\SampleProject\bin\Debug\Sample.exe.config
+C:\Progs\NRightAPI\SampleProject\obj\x86\Debug\Sample.exe
+C:\Progs\NRightAPI\SampleProject\obj\x86\Debug\Sample.pdb
+C:\Progs\NRightAPI\SampleProject\bin\Debug\Sample.exe
+C:\Progs\NRightAPI\SampleProject\bin\Debug\Sample.pdb
+C:\Progs\NRightAPI\SampleProject\bin\Debug\Microsoft.Http.dll
+C:\Progs\NRightAPI\SampleProject\bin\Debug\NRightApi.dll
+C:\Progs\NRightAPI\SampleProject\bin\Debug\NRightApi.pdb
+C:\Progs\NRightAPI\SampleProject\obj\x86\Debug\Sample.csprojResolveAssemblyReference.cache

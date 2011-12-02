@@ -9,3 +9,9 @@ C:\Users\Ameer\.ssh\NRightAPI\NRightAPI\bin\Debug\NRightApi.pdb
 C:\Users\Ameer\.ssh\NRightAPI\NRightAPI\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Ameer\.ssh\NRightAPI\NRightAPI\obj\Debug\NRightApi.dll
 C:\Users\Ameer\.ssh\NRightAPI\NRightAPI\obj\Debug\NRightApi.pdb
+C:\Progs\NRightAPI\NRightAPI\bin\Debug\NRightApi.dll
+C:\Progs\NRightAPI\NRightAPI\bin\Debug\NRightApi.pdb
+C:\Progs\NRightAPI\NRightAPI\bin\Debug\Microsoft.Http.dll
+C:\Progs\NRightAPI\NRightAPI\obj\Debug\NRightApi.dll
+C:\Progs\NRightAPI\NRightAPI\obj\Debug\NRightApi.pdb
+C:\Progs\NRightAPI\NRightAPI\obj\Debug\NRightApi.csprojResolveAssemblyReference.cache
