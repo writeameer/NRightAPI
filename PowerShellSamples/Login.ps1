@@ -9,7 +9,6 @@ function Login-ToRightScale
 	# Load NRightAPI.dll assembly
 	[Reflection.Assembly]::LoadFile((Get-Location).Path + "\NRightAPI.dll")
 
-
 	# Instantiate NRightAPI using RS Accout number
 	$global:api = new-object WriteAmeer.NRightAPI($account)
 
@@ -18,4 +17,5 @@ function Login-ToRightScale
 
 }
 
-Login-ToRightScale "$env:RS_USERNAME" "$env:RS_PASSWORD" "$env:RS_ACCOUNT" 
+Login-ToRightScale "$env:RS_USERNAME" "$env:RS_PASSWORD" "$env:RS_ACCOUNT" | Out-Null
+
