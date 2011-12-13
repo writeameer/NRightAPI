@@ -3,7 +3,7 @@
 
 
 # Get All Servers
-$myServerNickname = "VA.Dev.Management.WSUS-EC2.m1.small.USEast"
+$myServerNickname = "PHP1"
 
 $response = $api.GetRequest("servers.xml","filter=nickname=" + $myServerNickname)
 

@@ -1,18 +1,21 @@
-function Login
+function Login-ToRightScale
 {
-
+	Param(
+		[parameter(Mandatory=$true)] [string] $username,
+		[parameter(Mandatory=$true)] [string] $password,
+		[parameter(Mandatory=$true)] [string] $account
+	)
+	
 	# Load NRightAPI.dll assembly
 	[Reflection.Assembly]::LoadFile((Get-Location).Path + "\NRightAPI.dll")
 
-	# Get Credentials from System Variables
-	$username = [System.Environment]::GetEnvironmentVariable("VA_RS_username","machine")
-	$password = [System.Environment]::GetEnvironmentVariable("VA_RS_password","machine")
-	$account = [System.Environment]::GetEnvironmentVariable("VA_RS_account","machine")
 
 	# Instantiate NRightAPI using RS Accout number
-	$global:api = new-object RightClient.NRightAPI($account)
+	$global:api = new-object WriteAmeer.NRightAPI($account)
 
 	# Login to RightScale 
 	$global:api.Login($username,$password)
 
 }
+
+Login-ToRightScale "$env:RS_USERNAME" "$env:RS_PASSWORD" "$env:RS_ACCOUNT" 

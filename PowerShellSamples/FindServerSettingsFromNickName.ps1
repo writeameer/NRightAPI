@@ -3,7 +3,7 @@
 . .\Login.ps1
 
 # Get All Servers
-$myServerNickname = "T1.Dev.Demo.SmtpDNS-EC2.m1.small.USEast"
+$myServerNickname = "PHP1"
 $response = $api.GetRequest("servers.xml","filter=nickname=" + $myServerNickname)
 
 # Get servers from Content body

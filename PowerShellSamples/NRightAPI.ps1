@@ -7,7 +7,7 @@
 $response = $api.GetRequest("servers.xml",$null)
  
 $servers = [xml] $response.Content.ReadAsString()
-$myserver = $servers.servers.server | where {$_.nickname -eq "T1.Dev.CES11_8.SmtpDNS.i386"}
+$myserver = $servers.servers.server | where {$_.nickname -eq "PHP1"}
 $serverid = $myserver.href.Split("/")[$myserver.href.Split("/").Length - 1 ]
 $response = $api.GetRequest("servers/" + $serverid + "/settings",$null)
 

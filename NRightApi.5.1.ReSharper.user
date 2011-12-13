@@ -9,29 +9,34 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="4475" fromTop="97" />
-      <File id="909251F8-FC4D-4441-A280-BFCF9D487B2D/f:Program.cs" caret="881" fromTop="26" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="1569" fromTop="0" />
+      <File id="909251F8-FC4D-4441-A280-BFCF9D487B2D/f:Program.cs" caret="80" fromTop="5" />
     </RecentFiles>
     <RecentEdits>
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8473" fromTop="22" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8473" fromTop="14" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8473" fromTop="22" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8473" fromTop="28" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8473" fromTop="18" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8473" fromTop="17" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8473" fromTop="6" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8473" fromTop="9" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8473" fromTop="27" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8473" fromTop="18" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8473" fromTop="14" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8473" fromTop="25" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8473" fromTop="5" />
-      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8473" fromTop="224" />
-      <File id="909251F8-FC4D-4441-A280-BFCF9D487B2D/f:Program.cs" caret="155" fromTop="7" />
-      <File id="909251F8-FC4D-4441-A280-BFCF9D487B2D/f:Program.cs" caret="648" fromTop="19" />
-      <File id="909251F8-FC4D-4441-A280-BFCF9D487B2D/f:Program.cs" caret="946" fromTop="28" />
-      <File id="909251F8-FC4D-4441-A280-BFCF9D487B2D/f:Program.cs" caret="262" fromTop="11" />
-      <File id="909251F8-FC4D-4441-A280-BFCF9D487B2D/f:Program.cs" caret="873" fromTop="26" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8537" fromTop="22" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8537" fromTop="14" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8537" fromTop="22" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8537" fromTop="28" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8537" fromTop="18" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8537" fromTop="17" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8537" fromTop="6" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8537" fromTop="9" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8537" fromTop="27" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8537" fromTop="18" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8537" fromTop="14" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8537" fromTop="25" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8537" fromTop="5" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="8537" fromTop="224" />
+      <File id="909251F8-FC4D-4441-A280-BFCF9D487B2D/f:Program.cs" caret="65" fromTop="7" />
+      <File id="909251F8-FC4D-4441-A280-BFCF9D487B2D/f:Program.cs" caret="901" fromTop="28" />
+      <File id="909251F8-FC4D-4441-A280-BFCF9D487B2D/f:Program.cs" caret="172" fromTop="11" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="5204" fromTop="24" />
+      <File id="909251F8-FC4D-4441-A280-BFCF9D487B2D/f:Program.cs" caret="721" fromTop="23" />
+      <File id="909251F8-FC4D-4441-A280-BFCF9D487B2D/f:Program.cs" caret="62" fromTop="3" />
+      <File id="909251F8-FC4D-4441-A280-BFCF9D487B2D/f:Program.cs" caret="529" fromTop="13" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="6570" fromTop="24" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="6970" fromTop="21" />
+      <File id="3C2996CD-47C7-467A-81D8-F922FDF30C77/f:NRightAPI.cs" caret="5127" fromTop="14" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -49,11 +54,11 @@
     <ItemStatistics item="Default">
       <Item value="var" priority="17" />
       <Item value="Send`0" priority="1" />
-      <Item value="httpMethod" priority="0" />
+      <Item value="httpMethod" priority="2" />
       <Item value="apiString" priority="3" />
       <Item value="new" priority="6" />
       <Item value="string" priority="17" />
-      <Item value="return" priority="6" />
+      <Item value="return" priority="7" />
       <Item value="response" priority="8" />
       <Item value="null" priority="8" />
       <Item value="Console`0" priority="7" />
@@ -64,17 +69,17 @@
       <Item value="void" priority="4" />
       <Item value="restResponse" priority="5" />
       <Item value="ValueType`0" priority="0" />
-      <Item value="if" priority="10" />
+      <Item value="if" priority="11" />
       <Item value="content" priority="2" />
       <Item value="String`0" priority="2" />
       <Item value="HttpResponseMessage" priority="0" />
       <Item value="parameters" priority="9" />
       <Item value="Nullable`0" priority="0" />
-      <Item value="else" priority="4" />
+      <Item value="else" priority="5" />
       <Item value="restresponse" priority="2" />
       <Item value="Count`1" priority="0" />
       <Item value="Length" priority="1" />
-      <Item value="Put" priority="0" />
+      <Item value="Put" priority="1" />
       <Item value="Delete" priority="1" />
       <Item value="location" priority="0" />
       <Item value="try" priority="0" />
@@ -103,7 +108,7 @@
       <Item value="HttpServerUtility`0" priority="0" />
       <Item value="HttpUtility`0" priority="1" />
       <Item value="HttpResponseMessage`0" priority="0" />
-      <Item value="Post" priority="0" />
+      <Item value="Post" priority="1" />
       <Item value="PostRequest`0" priority="0" />
       <Item value="HttpClient`0" priority="0" />
       <Item value="this" priority="0" />
